@@ -31,9 +31,6 @@ public class Initial extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        //_basePanel = new javax.swing.JPanel();
-       // _comboBoxPanel = new javax.swing.JPanel();
-        //_reqTypeList = new javax.swing.JComboBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         _FileMenu = new javax.swing.JMenu();
         _newFileItem = new javax.swing.JMenuItem();
@@ -45,47 +42,9 @@ public class Initial extends javax.swing.JFrame {
         _NavigationMenu = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-/*
-        _reqTypeList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "<Select Requirement Type>", "Generic", "Ubiquitous", "Event Driven", "Unwanted Behaviour","State Driven" }));
-        _reqTypeList.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                _reqTypeListActionPerformed(evt);
-            }
-        });
+        setTitle("myEarsEditor");
+        setAlwaysOnTop(true);
 
-        javax.swing.GroupLayout _comboBoxPanelLayout = new javax.swing.GroupLayout(_comboBoxPanel);
-        _comboBoxPanel.setLayout(_comboBoxPanelLayout);
-        _comboBoxPanelLayout.setHorizontalGroup(
-            _comboBoxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(_comboBoxPanelLayout.createSequentialGroup()
-                .addGap(145, 145, 145)
-                .addComponent(_reqTypeList, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(319, Short.MAX_VALUE))
-        );
-        _comboBoxPanelLayout.setVerticalGroup(
-            _comboBoxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(_comboBoxPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(_reqTypeList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout _basePanelLayout = new javax.swing.GroupLayout(_basePanel);
-        _basePanel.setLayout(_basePanelLayout);
-        _basePanelLayout.setHorizontalGroup(
-            _basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(_comboBoxPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        _basePanelLayout.setVerticalGroup(
-            _basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(_basePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(_comboBoxPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(365, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("untitled", _basePanel);
-*/
         jScrollPane1.setViewportView(jTabbedPane1);
 
         _FileMenu.setText("File");
@@ -124,11 +83,11 @@ public class Initial extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
         );
 
         pack();
@@ -190,12 +149,9 @@ public class Initial extends javax.swing.JFrame {
     private javax.swing.JMenu _FileMenu;
     private javax.swing.JMenu _NavigationMenu;
     private javax.swing.JMenu _ToolsMenu;
-    private javax.swing.JPanel _basePanel;
-    private javax.swing.JPanel _comboBoxPanel;
     private javax.swing.JMenuItem _exitFileItem;
     private javax.swing.JMenuItem _newFileItem;
     private javax.swing.JMenuItem _openFileItem;
-    private javax.swing.JComboBox _reqTypeList;
     private javax.swing.JMenuItem _saveAsFileItem;
     private javax.swing.JMenuItem _saveFileItem;
     private javax.swing.JMenuBar jMenuBar1;
