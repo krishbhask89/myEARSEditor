@@ -5,6 +5,8 @@
  */
 package myearseditor.View;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author Krish
@@ -29,9 +31,9 @@ public class Initial extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        _basePanel = new javax.swing.JPanel();
-        _comboBoxPanel = new javax.swing.JPanel();
-        _reqTypeList = new javax.swing.JComboBox();
+        //_basePanel = new javax.swing.JPanel();
+       // _comboBoxPanel = new javax.swing.JPanel();
+        //_reqTypeList = new javax.swing.JComboBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         _FileMenu = new javax.swing.JMenu();
         _newFileItem = new javax.swing.JMenuItem();
@@ -43,7 +45,7 @@ public class Initial extends javax.swing.JFrame {
         _NavigationMenu = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
+/*
         _reqTypeList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "<Select Requirement Type>", "Generic", "Ubiquitous", "Event Driven", "Unwanted Behaviour","State Driven" }));
         _reqTypeList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,7 +85,7 @@ public class Initial extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("untitled", _basePanel);
-
+*/
         jScrollPane1.setViewportView(jTabbedPane1);
 
         _FileMenu.setText("File");
@@ -134,11 +136,19 @@ public class Initial extends javax.swing.JFrame {
 
     private void _reqTypeListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event__reqTypeListActionPerformed
         // TODO add your handling code here:
+    	System.out.println("reuirement list clicked.");
+    	
+    	
     }//GEN-LAST:event__reqTypeListActionPerformed
 
     private void _newFileItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event__newFileItemActionPerformed
         // TODO add your handling code here:
-        new BasePanel;
+    	
+    	System.out.println("new item clicked.");
+    	JPanel newPanel = new BasePanel();
+    	jTabbedPane1.addTab("untitled", newPanel);
+    	
+        
     }//GEN-LAST:event__newFileItemActionPerformed
 
     /**
