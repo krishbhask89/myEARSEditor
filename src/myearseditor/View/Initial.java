@@ -93,17 +93,10 @@ public class Initial extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void _reqTypeListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event__reqTypeListActionPerformed
-        // TODO add your handling code here:
-    	System.out.println("reuirement list clicked.");
-    	
-    	
-    }//GEN-LAST:event__reqTypeListActionPerformed
-
+    
     private void _newFileItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event__newFileItemActionPerformed
         // TODO add your handling code here:
     	
-    	System.out.println("new item clicked.");
     	JPanel newPanel = new BasePanel();
     	jTabbedPane1.addTab("untitled", newPanel);
     	
