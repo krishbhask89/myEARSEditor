@@ -88,8 +88,6 @@ public class BasePanel extends javax.swing.JPanel {
                      break;
              case 3: _reqProps = new LeftPanel("Event Driven");    
                      _reqTemp = new EventDrivenTemp();
-                     _newReq.add(_reqProps, BorderLayout.WEST);
-                     _newReq.add(_reqTemp,BorderLayout.EAST);
                     break;
              case 4: _reqProps = new LeftPanel("Unwanted Behaviour");    
                      _reqTemp = new UnwantedBehavTemp();
