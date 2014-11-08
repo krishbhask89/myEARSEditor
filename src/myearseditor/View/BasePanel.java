@@ -19,6 +19,7 @@ public class BasePanel extends javax.swing.JPanel {
      */
     public BasePanel() {
         initComponents();
+        this._reqPosition = 0;
     }
 
     /**
@@ -77,20 +78,31 @@ public class BasePanel extends javax.swing.JPanel {
         int _reqSelected = _reqTypeList.getSelectedIndex();
         if(_reqSelected > 0 && _reqSelected < 6)
         {    JPanel _newReq = new JPanel(new BorderLayout());   
-             
+             JPanel _reqProps,_reqTemp;
            switch(_reqSelected)
-           { case 1: JPanel _reqProps = new LeftPanel("Generic");
-                  JPanel _reqTemp = new GenericTemp();
-                  _newReq.add(_reqProps, BorderLayout.WEST);
-                  _newReq.add(_reqTemp,BorderLayout.EAST);
-                  break;
-             case 2: JPanel _reqProps = new LeftPanel("Ubiquitous");
-                  JPanel _reqTemp = new UbiTemp();
-                  _newReq.add(_reqProps, BorderLayout.WEST);
-                  _newReq.add(_reqTemp,BorderLayout.EAST);
-                  break;
-           }    
-        }    
+           { case 1: _reqProps = new LeftPanel("Generic");
+                     _reqTemp = new GenericTemp();
+                     break;
+             case 2: _reqProps = new LeftPanel("Ubiquitous");
+                     _reqTemp = new UbiTemp();
+                     break;
+             case 3: _reqProps = new LeftPanel("Event Driven");    
+                     _reqTemp = new EventDrivenTemp();
+                     _newReq.add(_reqProps, BorderLayout.WEST);
+                     _newReq.add(_reqTemp,BorderLayout.EAST);
+                    break;
+             case 4: _reqProps = new LeftPanel("Unwanted Behaviour");    
+                     _reqTemp = new UnwantedBehavTemp();
+                    break;
+             case 5: _reqProps = new LeftPanel("StateDriven");
+                     _reqTemp = new StateDrivenTemp();
+                    break;
+           }
+         _newReq.add(_reqProps, BorderLayout.WEST);
+         _newReq.add(_reqTemp,BorderLayout.EAST);
+         this.add(_newReq,_reqPosition);
+         _reqPosition++;
+        } 
     }//GEN-LAST:event__reqTypeListActionPerformed
 
 
@@ -98,4 +110,5 @@ public class BasePanel extends javax.swing.JPanel {
     private javax.swing.JPanel _comboBoxPanel;
     private javax.swing.JComboBox _reqTypeList;
     // End of variables declaration//GEN-END:variables
+    private int _reqPosition; 
 }
