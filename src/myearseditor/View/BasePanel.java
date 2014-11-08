@@ -96,6 +96,8 @@ public class BasePanel extends javax.swing.JPanel {
              case 5: _reqProps = new LeftPanel("StateDriven");
                      _reqTemp = new StateDrivenTemp();
                     break;
+             default: _reqProps = null;
+                      _reqTemp = null;
            }
          _newReq.add(_reqProps, BorderLayout.WEST);
          _newReq.add(_reqTemp,BorderLayout.EAST);

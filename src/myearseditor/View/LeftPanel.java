@@ -34,6 +34,8 @@ public class LeftPanel extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(110, 110));
+
         jLabel4.setText("    Index#");
 
         jLabel5.setText(this.typeName);
@@ -58,7 +60,7 @@ public class LeftPanel extends javax.swing.JPanel {
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton2)
-                        .addGap(0, 10, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -82,12 +84,7 @@ public class LeftPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel _reqProperties;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
