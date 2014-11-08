@@ -101,8 +101,8 @@ public class Initial extends javax.swing.JFrame {
     	
     	BasePanel newPanel = new BasePanel();
     	jTabbedPane1.addTab("untitled", newPanel);
-    	RequirementFile _Reqfile = new RequirementFile(newPanel); 
-    	
+    	RequirementFile _Reqfile = new RequirementFile(newPanel);
+                
         
     }//GEN-LAST:event__newFileItemActionPerformed
 

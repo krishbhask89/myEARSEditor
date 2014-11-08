@@ -6,6 +6,9 @@
 package myearseditor.View;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -35,6 +38,11 @@ public class BasePanel extends javax.swing.JPanel {
         _comboBoxPanel = new javax.swing.JPanel();
         _reqTypeList = new javax.swing.JComboBox();
 
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        setAutoscrolls(true);
+        setPreferredSize(new java.awt.Dimension(515, 350));
+        setLayout(new javax.swing.BoxLayout(this, javax.swing.BoxLayout.Y_AXIS));
+
         _reqTypeList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "<Select Requirement Type>", "Generic", "Ubiquitous", "Event Driven", "Unwanted Behaviour","State Driven" }));
         _reqTypeList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,64 +57,55 @@ public class BasePanel extends javax.swing.JPanel {
             .addGroup(_comboBoxPanelLayout.createSequentialGroup()
                 .addGap(145, 145, 145)
                 .addComponent(_reqTypeList, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
         _comboBoxPanelLayout.setVerticalGroup(
             _comboBoxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(_comboBoxPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(_reqTypeList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(398, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(_comboBoxPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(_comboBoxPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(298, Short.MAX_VALUE))
-        );
+        add(_comboBoxPanel);
     }// </editor-fold>//GEN-END:initComponents
 
     private void _reqTypeListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event__reqTypeListActionPerformed
         // TODO add your handling code here:
         int _reqSelected = _reqTypeList.getSelectedIndex();
         if(_reqSelected > 0 && _reqSelected < 6)
-        {    JPanel _newReq = new JPanel(new BorderLayout());   
-             JPanel _reqProps,_reqTemp;
-           switch(_reqSelected)
-           { case 1: _reqProps = new LeftPanel("Generic");
-                     _reqTemp = new GenericTemp();
-                     break;
-             case 2: _reqProps = new LeftPanel("Ubiquitous");
-                     _reqTemp = new UbiTemp();
-                     break;
-             case 3: _reqProps = new LeftPanel("Event Driven");    
-                     _reqTemp = new EventDrivenTemp();
+        {    JPanel _newReq = new JPanel(new BorderLayout());
+            JPanel _reqProps,_reqTemp;
+            switch(_reqSelected)
+            { case 1: _reqProps = new LeftPanel("Generic");
+                      _reqTemp = new GenericTemp();
                     break;
-             case 4: _reqProps = new LeftPanel("Unwanted Behaviour");    
-                     _reqTemp = new UnwantedBehavTemp();
+              case 2: _reqProps = new LeftPanel("Ubiquitous");
+                        _reqTemp = new UbiTemp();
                     break;
-             case 5: _reqProps = new LeftPanel("StateDriven");
-                     _reqTemp = new StateDrivenTemp();
+              case 3: _reqProps = new LeftPanel("Event Driven");
+                      _reqTemp = new EventDrivenTemp();
                     break;
-             default: _reqProps = null;
-                      _reqTemp = null;
-           }
-         _newReq.add(_reqProps, BorderLayout.WEST);
-         _newReq.add(_reqTemp,BorderLayout.EAST);
-         this.add(_newReq,_reqPosition);
-         this.revalidate();
-         _reqPosition++;
-        } 
+              case 4: _reqProps = new LeftPanel("Unwanted Behaviour");
+                      _reqTemp = new UnwantedBehavTemp();
+                    break;
+              case 5: _reqProps = new LeftPanel("StateDriven");
+                      _reqTemp = new StateDrivenTemp();
+                    break;
+              default: _reqProps = null;
+                       _reqTemp = null;
+                    break;
+            }
+             _reqProps.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+             _reqTemp.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            _newReq.setBorder(BorderFactory.createBevelBorder(1));
+            _newReq.add(_reqProps,BorderLayout.WEST);
+            _newReq.add(_reqTemp,BorderLayout.EAST);
+            this.add(_newReq,_reqPosition++);
+            this.validate();
+        }
         else { JOptionPane.showMessageDialog(this,"Please select a valid option", "Warning", JOptionPane.WARNING_MESSAGE); }
-            
+
     }//GEN-LAST:event__reqTypeListActionPerformed
 
 
