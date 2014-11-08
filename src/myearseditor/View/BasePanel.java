@@ -101,6 +101,8 @@ public class BasePanel extends javax.swing.JPanel {
          this.add(_newReq,_reqPosition);
          _reqPosition++;
         } 
+        else
+            
     }//GEN-LAST:event__reqTypeListActionPerformed
 
 
