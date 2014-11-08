@@ -29,4 +29,8 @@ public class UbiquitousRequirement extends EARSRequirement{
     public String getReqSysResponse() {
         return _reqSysResponse;
     }
+    
+    public UbiquitousRequirement(){
+    	super("Ubiquitous");
+    }
 }

@@ -6,6 +6,7 @@
 package myearseditor.View;
 
 import java.awt.BorderLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -99,9 +100,10 @@ public class BasePanel extends javax.swing.JPanel {
          _newReq.add(_reqProps, BorderLayout.WEST);
          _newReq.add(_reqTemp,BorderLayout.EAST);
          this.add(_newReq,_reqPosition);
+         this.revalidate();
          _reqPosition++;
         } 
-        else
+        else { JOptionPane.showMessageDialog(this,"Please select a valid option", "Warning", JOptionPane.WARNING_MESSAGE); }
             
     }//GEN-LAST:event__reqTypeListActionPerformed
 

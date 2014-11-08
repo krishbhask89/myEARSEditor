@@ -5,10 +5,42 @@
  */
 package myearseditor.controller;
 
+import java.util.Vector;
+import myearseditor.View.BasePanel;
+import myearseditor.model.EARSRequirement;
+
 /**
  *
  * @author Krish
  */
 public class RequirementFile {
+	public BasePanel _reqPanel;
+	public Vector<EARSRequirement> _FileReqList;
+    private String _fileName;
+    private String _fileFormat;
+    enum ColourCode{RED,GREEN,GREY};
+    private ColourCode _fileColourCode;
     
+    public RequirementFile(BasePanel _reqBp){
+    	this._fileName = "Untitled";
+    	this._reqPanel = _reqBp;
+    	this._FileReqList = new Vector<EARSRequirement>();
+    	this._fileColourCode = ColourCode.RED;
+    }
+    
+    public void _OnSaveAs(String _fName){
+    	this._fileName = _fName;
+    	loadReqs();
+    	//when the SaveAs has been clicked for the File
+    }
+    
+    public void loadReqs(){
+    	//loads Requirements from the BasePanel into the Vector _FileReqList
+    	
+    }
+    
+    public void _OnSave(){
+    	//when the Save button is clicked for the File
+    	loadReqs();
+    }
 }

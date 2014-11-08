@@ -46,4 +46,8 @@ public class GenericRequirement extends EARSRequirement{
     public void setReqSysResponse(String _reqSysResponse) {
         this._reqSysResponse = _reqSysResponse;
     }
+    
+    public GenericRequirement(){
+    	super("Generic");
+    }
 }

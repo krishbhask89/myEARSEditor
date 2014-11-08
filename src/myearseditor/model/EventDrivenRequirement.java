@@ -16,6 +16,10 @@ public class EventDrivenRequirement extends EARSRequirement{
     private String _reqSysName;
     private String _reqSysResponse;
 
+    public EventDrivenRequirement(){
+    	super("Event Driven");
+    }
+    
     public String getReqOptionalPreCond() {
         return _reqOptionalPreCond;
     }

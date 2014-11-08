@@ -15,7 +15,11 @@ public class UnwantedBehaviour extends EARSRequirement{
     private String _reqTrigger;
     private String _reqSysName;
     private String _reqSysResponse;
-
+    
+    public UnwantedBehaviour(){
+    	super("Unwanted Behaviour");
+    }
+    
     public void setReqOptionalPreCond(String _reqOptionalPreCond) {
         this._reqOptionalPreCond = _reqOptionalPreCond;
     }

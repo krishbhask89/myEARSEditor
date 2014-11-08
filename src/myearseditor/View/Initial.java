@@ -7,6 +7,8 @@ package myearseditor.View;
 
 import javax.swing.JPanel;
 
+import myearseditor.controller.RequirementFile;
+
 /**
  *
  * @author Krish
@@ -97,8 +99,9 @@ public class Initial extends javax.swing.JFrame {
     private void _newFileItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event__newFileItemActionPerformed
         // TODO add your handling code here:
     	
-    	JPanel newPanel = new BasePanel();
+    	BasePanel newPanel = new BasePanel();
     	jTabbedPane1.addTab("untitled", newPanel);
+    	RequirementFile _Reqfile = new RequirementFile(newPanel); 
     	
         
     }//GEN-LAST:event__newFileItemActionPerformed

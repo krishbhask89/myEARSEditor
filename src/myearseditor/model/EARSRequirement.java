@@ -12,7 +12,9 @@ package myearseditor.model;
 public abstract class EARSRequirement {
     private long _reqId;
     private String _reqType;
-
+    enum ColorCode{ RED, GREY, GREEN};
+    private ColorCode _reqColorCode;
+    
     public void setReqId(long _reqId) {
         this._reqId = _reqId;
     }
@@ -24,6 +26,9 @@ public abstract class EARSRequirement {
     public String getReqType() {
         return _reqType;
     }
-    private enum _reqColorCode{ RED, GREY, GREEN};
     
+    public EARSRequirement(String _rType){
+    	this._reqColorCode = ColorCode.RED;
+    	this._reqType = _rType;
+    }
 }
