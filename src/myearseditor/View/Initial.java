@@ -6,6 +6,7 @@
 package myearseditor.View;
 
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 import myearseditor.controller.RequirementFile;
 
@@ -31,7 +32,7 @@ public class Initial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
+        //jScrollPane1 = new javax.swing.JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         _FileMenu = new javax.swing.JMenu();
@@ -47,7 +48,9 @@ public class Initial extends javax.swing.JFrame {
         setTitle("myEarsEditor");
         setAlwaysOnTop(true);
 
-        jScrollPane1.setViewportView(jTabbedPane1);
+        //jScrollPane1.getViewport().add(jTabbedPane1);
+        //jScrollPane1.setViewportView(jTabbedPane1);
+        
 
         _FileMenu.setText("File");
 
@@ -85,11 +88,11 @@ public class Initial extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
         );
 
         pack();
@@ -100,7 +103,24 @@ public class Initial extends javax.swing.JFrame {
         // TODO add your handling code here:
     	
     	BasePanel newPanel = new BasePanel();
-    	jTabbedPane1.addTab("untitled", newPanel);
+    	JScrollPane jsp = new JScrollPane(newPanel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+    	//jsp.add(newPanel);
+    	jTabbedPane1.addTab("untitled", jsp);
+    	//jScrollPane1.add(jTabbedPane1);
+    	//jsp.setViewportView(newPanel);
+    	//jsp.setViewportView(newPanel);
+    	
+    	javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
+        );
+    	
     	RequirementFile _Reqfile = new RequirementFile(newPanel);
                 
         
@@ -151,7 +171,7 @@ public class Initial extends javax.swing.JFrame {
     private javax.swing.JMenuItem _saveAsFileItem;
     private javax.swing.JMenuItem _saveFileItem;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JScrollPane jScrollPane1;
+    //private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }
